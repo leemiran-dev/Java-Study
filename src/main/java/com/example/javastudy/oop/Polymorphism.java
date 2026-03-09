@@ -2,17 +2,13 @@ package com.example.javastudy.oop;
 
 public class Polymorphism {
     public static void main(String[] args) {
-        KoreanChef lee = new KoreanChef();
+        ChineseChef song = new ChineseChef();
 
-        printCookInfo(lee);
+        printCookInfo(song);
     }
 
     public static void printCookInfo(Chef chef){
-        if (chef instanceof KoreanChef){
-            System.out.println("한식 요리중...");
-        }
-        else if (chef instanceof ChineseChef){
-            System.out.println("중식 요리중...");
-        }
+       // 수정 전에는 새로운 셰프가 추가되면 관련된 파일에 else if 등 조건문을 추가해줘야 함
+        chef.printCookInfo();
     }
 }
